@@ -65,13 +65,13 @@ function displayEditForm() {
 
 function getRecipeValues() {
   let ingredientsNodes = document.getElementsByName("ingredients")
-  var ingredients = []
-  for(var i=0;i<ingredientsNodes.length;i++) {
+  let ingredients = []
+  for (let i=0; i<ingredientsNodes.length; i++) {
     if(ingredientsNodes[i].value !== "") {
       ingredients.push(ingredientsNodes[i].value)
     }
   }
-  var name = document.getElementById("name").value
+lr name = document.getElementById("name").value
   var description = document.getElementById("description").value
   var recipe = {name, ingredients, description}
   return(recipe)
