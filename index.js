@@ -71,27 +71,27 @@ function getRecipeValues() {
       ingredients.push(ingredientsNodes[i].value)
     }
   }
-lr name = document.getElementById("name").value
-  var description = document.getElementById("description").value
-  var recipe = {name, ingredients, description}
+  let name = document.getElementById("name").value;
+  let description = document.getElementById("description").value;
+  let recipe = {name, ingredients, description};
   return(recipe)
 }
 
 function handlebarsSetup() {
   Handlebars.registerHelper('displayIngredient', function(ingredient) {
-    return new Handlebars.SafeString('<li name="ingredientsList">' + ingredient + '</li>')
+    return new Handlebars.SafeString('<li name="ingredientsList">' + ingredient + '</li>');
   })
-  Handlebars.registerPartial('recipeDetailsPartial', document.getElementById("recipe-details-partial").innerHTML)
-  Handlebars.registerPartial('recipeFormPartial', document.getElementById("recipe-form-partial").innerHTML)
+  Handlebars.registerPartial('recipeDetailsPartial', document.getElementById("recipe-details-partial").innerHTML);
+  Handlebars.registerPartial('recipeFormPartial', document.getElementById("recipe-form-partial").innerHTML);
 }
 
 
 function init() {
   //put any page initialization/handlebars initialization here
   handlebarsSetup()
-  initForm()
+  initForm();
 }
 document.addEventListener("DOMContentLoaded", function(event) {
-  init()
+  init();
 })
 
